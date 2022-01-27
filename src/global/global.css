@@ -1,0 +1,18 @@
+:root{
+    --color-blue:#0F9AFE;
+    --color-white:#fff;
+    --color-white-400:#EFF8FF;
+    --color-gray-light:#DBDBDB;
+    --color-gray:#6E7275;
+    --color-gray-200:#293145;
+
+    --fonte-Inter:"Inter",sans-serif;
+    --fonte-Sora:"Sora",sans-serif;
+    --fonte-roboto:'Roboto', sans-serif;;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
