@@ -1,34 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Sora:wght@200;300;400;500;600;700&display=swap');
 
-.cabecalho{
-    background: var(--color-white);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+.heading{
+    font-family: var(--fonte-Sora);
+    font-weight: 600;
+    text-align: center;
+    margin: 5rem 0;
+    font-size: 4rem;
+    color: var(--color-gray-200);
 }
 
-.cabecalho .max-width{
+.header .max-width{
+    background: var(--color-white);
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
     max-width: 144rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3rem 5%;
+    z-index: 99;
 }
 
-.cabecalho .max-width .logo{
+.header .max-width .logo{
     width: 10rem;
     height: 3rem;
     object-fit: cover;
 }
 
-.cabecalho .max-width .navbar ul{
+.header .max-width .navbar ul{
     display: flex;
     align-items: center;
 }
 
-.cabecalho .max-width .navbar ul li{
+.header .max-width .navbar ul #fechar{
+    display: none;
+}
+
+.header .max-width .navbar ul li{
     margin: 0 2.5rem;
 }
 
-.cabecalho .max-width .navbar ul li a{
+.header .max-width .navbar ul li a{
     color: var(--color-gray);
     font-size: 1.8rem;
     font-family: var(--fonte-Inter);
@@ -37,7 +54,30 @@
     transition: .2s linear;
 }
 
-.cabecalho .max-width .navbar ul li a:hover{
+.header .max-width .navbar ul li a:hover{
+    color: var(--color-blue);
+}
+
+.header .max-width .icons #menu-bars{
+    display: none;
+    border: 1.5px solid var(--color-gray);
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.header .max-width .icons i{
+    color: var(--color-gray-200);
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin: 0 .8rem;
+    transition: .2s ease-in-out;
+}
+
+.header .max-width .icons i:hover{
     color: var(--color-blue);
 }
 
@@ -47,16 +87,16 @@
     max-width: 144rem;
     margin: 0 auto;
     background: var(--color-white-400);
-    min-height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 5%;
+    padding: 10rem 5%;
+    padding-bottom: 5rem;
 }
 
 .home .content{
-    flex: 1 1 55rem;
+    flex: 1 1 35rem;
 }
 
 .home .content .title-prince{
@@ -80,7 +120,7 @@
     font-family: var(--fonte-Inter);
     font-size: 2rem;
     font-weight: 600;
-    padding: 1.6rem 3.6rem 1.6rem 3.6rem;
+    padding: 1rem 3.6rem 1rem 3.6rem;
     cursor: pointer;
 }
 
@@ -90,8 +130,8 @@
 }
 
 .home .imagem{
-    flex: 1 1 50rem;
-    margin: 0 2.5rem;
+    flex: 1 1 35rem;
+    margin:2rem;
 }
 
 .home .imagem img{
@@ -102,31 +142,341 @@
 
 /* servicos */
 
-.servicos .sub-title{
-    font-family: var(--fonte-Sora);
-    font-weight: 600;
-    text-align: center;
-    margin-top: 5.6rem;
-    margin-bottom: 8rem;
-    font-size: 4rem;
-    color: var(--color-gray-200);
-}
-
 .servicos .container-box{
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
     align-items: center;
-    flex-wrap: wrap;
+    max-width: 144rem;
+    margin: 0 auto;
+    gap: 2rem;
+    padding-bottom: 5rem;
 }
 
 .servicos .container-box .support{
-    flex: 1 1 21rem;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
+    margin: 0 2rem;
+    text-align: center;
+}
+
+.servicos .container-box .support img{
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
 }
 
 .servicos .container-box .support h3{
     margin: 3rem 0 1.6rem 0;
     font-size: 1.8rem;
     font-family: var(--fonte-Sora);
+    color: var(--color-gray-200);
+}
+
+.servicos .container-box .support p{
+    font-size: 1.6rem;
+    font-family: var(--fonte-Inter);
+    color: var(--color-gray);
+    max-width: 25rem;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* seção apps */
+
+.App{
+    background: var(--color-white-400);
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.App .container-app{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    padding: 3rem 5%;
+}
+
+.App .container-app .sobre-apps{
+    flex: 1 1 40rem;
+    margin: 2rem 0;
+}
+
+.App .container-app .sobre-apps h3{
+    font-family: var(--fonte-Sora);
+    font-weight: 600;
+    font-size: 3.2rem;
+    color: var(--color-gray-200);
+}
+
+.App .container-app .sobre-apps p{
+    max-width: 44rem;
+    font-size: 1.6rem;
+    font-family: var(--fonte-Sora);
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--color-gray);
+    margin: 2.4rem 0;
+}
+
+.App .container-app .imagem{
+    flex: 1 1 40rem;
+    height: 40rem;
+}
+
+.App .container-app .imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.App .container-app .botoes img{
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.App .container-app .botoes img:hover{
+    transform: scale(1.07);
+}
+
+/* box-plans */
+
+.box-plans{
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.box-plans .paragrafo{
+    max-width: 57rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--fonte-Inter);
+    font-weight: 400;
+    color: var(--color-gray);
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.box-plans .categories{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 8rem 2.5rem;
+    gap: 3rem;
+}
+
+.box-plans .categories .plan{
+    flex: 0 1 37rem;
+    background: var(--color-white-400);
+    border-radius: .8rem;
+    padding: 3rem 2rem;
+    position: relative;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.box-plans .categories .plan.active{
+    background: var(--color-gray-200);
+    color: var(--color-white);
+}
+
+.box-plans .categories .plan:hover{
+    transform: translateY(-1rem);
+}
+
+.box-plans .categories .plan h3{
+    font-family: var(--fonte-Sora);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    color: var(--color-gray-200);
+}
+
+.box-plans .categories .plan.active h3{
+    color: var(--color-white);
+}
+
+.box-plans .categories .plan .btn-preferido{
+    display: inline-block;
+    background: var(--color-blue);
+    color: var(--color-white);
+    Padding:5px 32px 5px 32px;
+    border-radius: 1.5rem;
+    font-family: var(--fonte-Inter);
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-plans .categories .plan .price{
+    font-family: var(--fonte-roboto);
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--color-gray-200);
+    margin-top: 4.5rem;
+}
+
+.box-plans .categories .plan.active .price{
+    color: var(--color-white);
+}
+
+.box-plans .categories .plan .price sup{
+    font-size: 2rem;
+}
+
+.box-plans .categories .plan .price sub{
+    font-size: 2.6rem;
+}
+
+.box-plans .categories .plan p{
+    color: --color-gray;
+    font-family: var(--fonte-roboto);
+    font-size: 1.8rem;
+    max-width: 30rem;
+    margin: 0 auto 5.7rem auto;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.box-plans .categories .plan .btn{
+    display: inline-block;
+    padding: .8rem 8rem;
+    background: var(--color-blue);
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--fonte-Inter);
+    color: var(--color-white);
+    box-shadow: 1px 3px 4px rgba(19, 125, 224, 0.5);
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.box-plans .categories .plan .btn:hover{
+    transform: scale(1.06);
+}
+
+/* contato */
+
+.contato{
+    background-image: linear-gradient(90deg,#293145af,#293145b6),url(../imagens/contato-fundo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 144rem;
+    margin: 0 auto;
+    height: 38.2rem;
+}
+
+
+
+
+
+
+
+
+
+.rodape{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.rodape p{
+    font-size: 2rem;
+    font-family: var(--fonte-Sora);
+    font-weight: 400;
+    color: var(--color-gray-200);
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 50%;
+    }
+
+    .header .max-width{
+        padding: 3rem 7%;
+    }
+
+    .header .max-width .icons #menu-bars{
+        display: inline-block;
+    }
+
+    .header .max-width .navbar{
+        position: absolute;
+        top: 0;
+        left: -110%;
+        width: 27rem;
+        min-height: 100vh;
+        background: var(--color-white-400);
+        transition: .4s ease-in-out;
+        z-index: 99;
+    }
+
+    .header .max-width .navbar ul #fechar{
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 3.5rem;
+        cursor: pointer;
+    }
+
+    .header .max-width .navbar.active{
+        left: 0%;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+    }
+
+    .header .max-width .navbar ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .header .max-width .navbar ul li{
+        margin: 2rem 0;
+    }
+
+    .header .max-width .navbar ul li a{
+        color: var(--color-blue);
+        font-size: 2.5rem;
+    }
+
+    .header .max-width .navbar ul li a:hover{
+        color: var(--color-gray-200);
+    }
+
+    .home .content{
+        text-align: center;
+    }
+
+    .home .content .title-prince{
+        font-size: 3.5rem;
+    }
+}
+
+@media(max-width:425px){
+    .heading{
+        font-size: 3.5rem;
+    }
+
+    .App .container-app .sobre-apps h3{
+        font-size: 2.5rem;
+    }
+
+    .box-plans .heading{
+        font-size: 3.5rem;
+    }
 }

@@ -11,11 +11,12 @@
     <title>Agencia - Contato</title>
 </head>
 <body>
-    <header class="cabecalho">
+    <header class="header">
         <div class="max-width">
             <img src="src/imagens/logo.png" alt="Logo" class="logo">
             <div class="navbar">
                 <ul>
+                    <div class="fas fa-times" id="fechar"></div>
                     <li>
                         <a href="#How it works">Funcionalidades</a>
                     </li>
@@ -30,8 +31,15 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-user" id="user-contact"></i>
+            </div>
         </div>
     </header>
+
     <main>
         <section class="home">
             <div class="content">
@@ -44,7 +52,7 @@
         </section>
 
         <section class="servicos" id="How it works">
-            <h3 class="sub-title">Como funciona</h3>
+            <h3 class="heading">Como funciona</h3>
             <div class="container-box">
                 <div class="support">
                     <img src="src/imagens/pessoas.png" alt="peoples">
@@ -65,6 +73,59 @@
                 </div>
             </div>
         </section>
+
+        <section class="App" id="App">
+            <div class="container-app">
+                <div class="sobre-apps">
+                    <h3>Baixe nosso app para desfrutar mais!</h3>
+                    <p>Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.</p>
+                    <div class="botoes">
+                        <img src="src/imagens/botao-google.png" class="btn-google-play" alt="Saiba Mias google play">
+                        <img src="src/imagens/botao-appstore.png" class="btn-app-store" alt="Saiba Mias app Store">
+                    </div>
+                </div>
+                <div class="imagem">
+                    <img src="src/imagens/imagens-apps.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="box-plans" id="Planos">
+            <h1 class="heading">Nossos Planos</h1>
+            <p class="paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi quis euismod ultrices.</p>
+            <div class="categories">
+                <div class="plan">
+                    <h3>Basic</h3>
+                    <p class="price"><sup class="real">R$</sup>28<sub>/month</sub></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi quis euismod ultrices.</p>
+                    <a href="#" class="btn">to sign</a>
+                </div>
+
+                <div class="plan active">
+                    <h3>Standard</h3>
+                    <a href="#" class="btn-preferido">PREFERRED</a>
+                    <p class="price"><sup class="real">R$</sup>57<sub>/month</sub></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi quis euismod ultrices.</p>
+                    <a href="#" class="btn">to sign</a>
+                </div>
+
+                <div class="plan">
+                    <h3>Premium</h3>
+                    <p class="price"><sup class="">R$</sup>98<sub>/month</sub></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi quis euismod ultrices.</p>
+                    <a href="#" class="btn">to sign</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato" id="Contato">
+
+        </section>
     </main>
+
+    <footer class="rodape">
+        <p>Rachi - Todos os direitos reservados.</p>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
