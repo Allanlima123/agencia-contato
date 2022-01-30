@@ -565,4 +565,14 @@
     .box-plans .heading{
         font-size: 3.5rem;
     }
+
+    .App .container-app .botoes img{
+        width: 165px;
+    }
+}
+
+@media(max-width:370px){
+    .App .container-app .botoes img{
+        width: 140px;
+    }
 }
