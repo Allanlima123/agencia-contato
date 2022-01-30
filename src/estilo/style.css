@@ -131,7 +131,7 @@
 
 .home .imagem{
     flex: 1 1 35rem;
-    margin:2rem;
+    margin: 2rem;
 }
 
 .home .imagem img{
@@ -144,7 +144,7 @@
 
 .servicos .container-box{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
     align-items: center;
     max-width: 144rem;
     margin: 0 auto;
@@ -153,7 +153,7 @@
 }
 
 .servicos .container-box .support{
-    padding: 2rem 0;
+    padding: 2rem;
     margin: 0 2rem;
     text-align: center;
 }
@@ -194,7 +194,6 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 5%;
     padding: 3rem 5%;
 }
 
@@ -221,7 +220,7 @@
 }
 
 .App .container-app .imagem{
-    flex: 1 1 40rem;
+    flex: 1 1 25rem;
     height: 40rem;
 }
 
@@ -364,13 +363,86 @@
 /* contato */
 
 .contato{
-    background-image: linear-gradient(90deg,#293145af,#293145b6),url(../imagens/contato-fundo.png);
+    background-image: linear-gradient(90deg,#293145af,#293145b6),
+    url(../imagens/contato-fundo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 144rem;
     margin: 0 auto;
-    height: 38.2rem;
+    min-height: 38.2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contato .box-contato{
+    margin: 1.5rem;
+}
+
+.contato .box-contato h3{
+    color: var(--color-white);
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: var(--fonte-Sora);
+    margin-top: 5rem;
+}
+
+.contato .box-contato p{
+    color: var(--color-gray-light);
+    font-family: var(--fonte-roboto);
+    font-size: 1.8rem;
+    font-weight: 400;
+    max-width: 50rem;
+    margin-top: 1.6rem;
+    margin-bottom: 9.9rem;
+}
+
+.contato .box-contato .formulario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contato .box-contato .formulario form{
+    width: 30rem;
+}
+
+.contato .box-contato .formulario form input{
+    width: 100%;
+    border-bottom: .1rem solid var(--color-white);
+    background: none;
+    padding: 1rem 0;
+    color: var(--color-white);
+}
+
+.contato .box-contato .formulario form input::placeholder{
+    font-family: var(--fonte-Sora);
+    font-size: 1.8rem;
+    color: var(--color-white);
+    font-weight: 500;
+    background: none;
+    padding-left: .5rem;
+}
+
+.contato .box-contato .formulario  .btn-form{
+    display: inline-block;
+    width: 15rem;
+    height: 3.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    background: var(--color-blue);
+    font-size: 1.8rem;
+    color: var(--color-white);
+    font-family: var(--fonte-Inter);
+    border-radius: 5rem;
+    padding: .8rem 3.2rem;
+    cursor: pointer;
+}
+
+.contato .box-contato .formulario  .btn-form:hover{
+    transform: scale(1.06);
 }
 
 
@@ -458,12 +530,26 @@
         color: var(--color-gray-200);
     }
 
+    .home{
+        padding-top: 15rem;
+    }
+
     .home .content{
         text-align: center;
     }
 
     .home .content .title-prince{
         font-size: 3.5rem;
+    }
+}
+
+@media(max-width:490px){
+    .contato .box-contato .formulario{
+        justify-content: center;
+    }
+
+    .contato .box-contato .formulario form input{
+        margin-bottom: 2rem;
     }
 }
 
